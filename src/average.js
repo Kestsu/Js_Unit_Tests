@@ -13,6 +13,11 @@
 */
 
 const average = (array) => {
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== "number") {
+      return undefined;
+    }
+  }
   if (array.length !== 0) {
     let soma = 0;
     for (let i = 0; i < array.length; i += 1) {
@@ -23,5 +28,26 @@ const average = (array) => {
     return undefined;
   }
 };
+
+//   }
+// }
+// if (for (let i = 0; i < array.length; i += 1){
+//    if (typeof array[i] !== 'number')
+//   }
+// ){
+//   return undefined;
+// }
+
+// if (array.length === 0) {
+//   return undefined
+// }
+
+// if (array.length !=== 0) {
+//   let soma = 0;
+//   for (let i = 0; i < array.length; i += 1){
+//     soma += array[i];
+//   }
+//   return Math.round(soma / array.length);
+// }
 
 module.exports = average;
