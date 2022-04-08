@@ -42,7 +42,7 @@ describe("4 - Implemente os casos de teste para a função `circle`", () => {
   it("Verifica se circle retorna um objeto", () => {
 
     // Teste se circle retorna um objeto.
-    // expect(typeof circle()).toBe(Object)
+    expect(typeof circle(1)).toBe('object')
 
   });
 
