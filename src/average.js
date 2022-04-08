@@ -12,9 +12,10 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 const average = (array) => {
   for (let i = 0; i < array.length; i += 1) {
-    if (typeof array[i] !== "number") {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
   }
@@ -24,9 +25,8 @@ const average = (array) => {
       soma += array[i];
     }
     return Math.round(soma / array.length);
-  } else {
+  } 
     return undefined;
-  }
 };
 
 module.exports = average;
