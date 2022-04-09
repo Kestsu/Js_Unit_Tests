@@ -40,13 +40,18 @@ const calculator = (number1, number2) => {
     div: Math.floor(number1 / number2),
     sub: number1 - number2,
   };
-return calculadora;
+  return calculadora;
 };
 
 // console.log(calculator(7, 2));
-const arrayGenerator = (type) => {
-// 'keys', [ 'sum', 'mult', 'div', 'sub' ]
-// 'values',  [ 3, 2, 1, 0 ]
-// 'entries',  [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
+const arrayGenerator = (type, array) => {
+  if (type === 'keys') {
+    return Object.keys(array);
+  } if (type === 'values') {
+    return [array.sum, array.mult, array.div, array.sub];
+  } if (type === 'entries') {
+    return Object.entries(array);
+  } 
 };
+// console.log(arrayGenerator('values', { sum: 3, mult: 2, div: 1, sub: 0 }));
 module.exports = { calculator, arrayGenerator };
